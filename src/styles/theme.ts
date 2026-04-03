@@ -14,8 +14,10 @@ export const theme = {
       border: '#d8d8d8',
     },
     windowBar: '#4a4e54',
+    windowBarText: '#ffffff',
     button: {
       bg: '#f0f0f0',
+
       bgHover: '#e0e0e0',
       text: '#1a1a1a',
     },
@@ -40,6 +42,7 @@ export const theme = {
       border: '#ffffff',
     },
     windowBar: '#1e2a46',
+    windowBarText: '#e6eeff',
     button: {      bg: '#2a2a2a',
       bgHover: '#3a3a3a',
       text: '#ffffff',
@@ -73,5 +76,6 @@ export const getThemeVariables = (isDark: boolean) => {
     '--toggle-bg-active': t.toggle.bgActive,
     '--toggle-text': t.toggle.text,
     '--window-bar-bg': t.windowBar,
+    '--window-bar-text': t.windowBarText,
   } as React.CSSProperties;
 };

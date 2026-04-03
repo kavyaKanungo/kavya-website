@@ -41,14 +41,14 @@
   justify-content: space-between;
   padding: 0.7rem 1.2rem;
   background-color: var(--window-bar-bg);
-  color: var(--text-color);
+  color: var(--window-bar-text);
   border-bottom: 1px solid var(--window-border);
   user-select: none;
 }
 
 .title {
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--window-bar-text);
   font-size: 0.9rem;
 }
 

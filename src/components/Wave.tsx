@@ -19,8 +19,8 @@ export function Wave({ height = 480 }: WaveProps) {
   ];
 
   const darkStops = [
-    { offset: '0%', color: '#0f2d6f' },
-    { offset: '100%', color: '#2cd5e2' },
+    { offset: '0%', color: '#0c3257' },
+    { offset: '100%', color: '#326283' },
   ];
 
   const stops = isDark ? darkStops : lightStops;
@@ -31,9 +31,9 @@ export function Wave({ height = 480 }: WaveProps) {
         fill={`url(#${gradientId})`}
         paused={false}
         options={{
-          height: 320,
-          amplitude: 60,
-          speed: 0.25,
+          height: 350,
+          amplitude: 30,
+          speed: 0.175,
           points: 3,
         }}
         style={{

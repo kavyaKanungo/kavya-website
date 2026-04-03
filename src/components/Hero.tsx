@@ -22,7 +22,7 @@ export function Hero() {
       <div className={styles.hero}>
         <div className={styles.window}>
           <div className={styles.windowBar}>
-            <span className={`${styles.homeText} ${!isDark ? styles.homeTextLight : ''}`}>home</span>
+            <span className={styles.homeText}>home</span>
           </div>
           <div className={styles.content}>
             <h1 className={styles.headline}>
