@@ -1,0 +1,144 @@
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.window {
+  background-color: var(--modal-bg);
+  border: 1px solid var(--window-border);
+  border-radius: 16px;
+  padding: 0;
+  max-width: 760px;
+  width: 80%;  height: 65vh;
+  min-height: 60vh;  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+  pointer-events: auto;
+  animation: slideUpWindow 0.4s ease;
+}
+
+.windowBar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--window-bar-bg);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--window-border);
+}
+
+.homeText {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.homeTextLight {
+  color: white;
+}
+
+
+@keyframes slideUpWindow {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: calc(100% - 3rem);
+}
+
+.headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  letter-spacing: -0.02em;
+}
+
+.orangeText {
+  color: #ff7c4d;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.actionButton {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .window {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .headline {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .buttonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
